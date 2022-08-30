@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Moment -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/locale/es.js"></script>
+    
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@200&family=Roboto+Condensed:wght@300&family=Viga&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="assets/img/icono-dinero.png" />
+    <title>Conversiones-monedas-chile</title>
+</head>
+<body>
+  <h1 style="color: #fff; text-align: center; font-size: 15px;">conversion de monedas</h1>
+
+	<div class="container">
+    <div class="d-flex justify-content-center">
+      <img src="assets/img/billete-dolar.png" alt="" style="width: 200px; height:100px ; " >
+    </div>
+ 
+ 
+		<!-- Las filas (row) son grupos HORIZONTALES de columnas-->
+
+		<!-- Los tamaños de Columna en Bootsrap 5 son:
+			.col 		Extra Pequeño (Extra Small) - Smartphones Vertical		Menos de 576px
+			.col-sm 	Pequeño (Small) - Smartphones Vertical	 				Mas de 576px y Menos de 768px
+			.col-md 	Mediano (Medium) - Tablets 								Mas de 768px y Menos de 992px
+			.col-lg 	Largo (Large) - Computadoras							Mas de 992px y Menos de 1200px
+			.col-xl 	Extra Largo (Extra Large) - Computadoras				Mas de 1200px
+			.col-xxl 	Extra Extra Largo (Extra Extra Large) - Televisiones 	Mas de 1400px
+		-->
+
+		<div class="row">
+			<div class="col-12 col-sm-12" style=" display: flex; justify-content: center;">
+				<div class="card"  >
+					<div class="fecha" style="text-align: center;">
+				  
+					</div>
+					
+					  <div class="card-body text-center">
+						  <div class="carta ">
+							  <h2 style="font-size:15px">Pesos CLP</h2>
+							  <input type="text"  id="input" class="input" placeholder=" ejemplo:25000"  /> 
+							  <span class="error"></span>
+							  <h2 >moneda a convertir</h2>
+							  <select name="monedas" id="monedas" >
+								  
+								  <option value="" disabled selected>Seleccione una Moneda...</option>
+									<option value="dolar">dolar</option>
+									<option value="euro">euro</option>
+									<option value="uf">uf</option>
+									<option value="utm">utm</option>
+									<option value="bitcoin">bitcoin'</option>
+								 
+									
+								</select>
+								<h2 class="h2" style="font-size:15px ;">resultado:</h2>
+								<h3 class="valor_divisa" style="color: rgb(27, 27, 27); text-align: center; font-size: 15px; font-weight: strong;position: relative; left: 30px;"></h3>
+								
+							  <button id="buscar" onclick="validarselect(); "> buscar</button>
+							</div>
+					  </div>
+					</div>
+			</div>
+
+		
+
+		
+		</div>
+	</div>
+  
+ 
+<div class="row d-flex justify-content-center ">
+<div class="col-10 ">
+    <div class="grafica" >
+        <canvas id="myChart" style="width:600px ;"></canvas>
+        </div>
+</div>
+</div>
+
+  
+<script type="text/javascript" src="assets/js/js.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<style>
+    body{
+        background: rgb(15, 15, 15);
+   overflow-x: hidden;
+    }
+.card{
+  width: 400px;
+ font-family: 'Viga', sans-serif;
+ border: 3px solid rgb(72, 155, 158);
+}
+.row{
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+h2{
+    display: block;
+      position: relative;
+    
+    margin-top: 10px;
+    
+}
+
+
+</style>
+</body>
+</html>
